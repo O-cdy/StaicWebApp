@@ -32,6 +32,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Build And Deploy
+        run: python -m pip install --upgrade pip
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
