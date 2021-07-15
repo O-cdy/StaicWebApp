@@ -32,7 +32,8 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_THANKFUL_OCEAN_02C3A6F00 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
           action: "upload"
-          run: /github/workspace/pythonenv3.8/bin/python -m pip install --upgrade pip
+          run: |
+            /github/workspace/pythonenv3.8/bin/python -m pip install --upgrade pip
       - name: Upgrade pip
         run: /github/workspace/pythonenv3.8/bin/python -m pip install --upgrade pip
       - name: Build And Deploy2
